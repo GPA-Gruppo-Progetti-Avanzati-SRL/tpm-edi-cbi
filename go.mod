@@ -3,7 +3,7 @@ module tpm-edi-cbi
 go 1.19
 
 require (
-	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.10
+	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.11
 	github.com/rs/zerolog v1.29.0
 	github.com/stretchr/testify v1.8.1
 )

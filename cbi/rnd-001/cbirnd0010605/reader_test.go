@@ -21,7 +21,7 @@ func TestReader(t *testing.T) {
 	for err == nil {
 		rec, err = r.Read()
 		if err == nil {
-			t.Log(rec)
+			t.Log(rec.String())
 		}
 	}
 

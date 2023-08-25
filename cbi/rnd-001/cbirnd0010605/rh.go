@@ -85,6 +85,7 @@ const (
 	FifthCashOnHandDate      = "fifth-cash-on-hand-date"
 	FifthCashSign            = "fifth-cash-sign"
 	fifthCashBalance         = "fifth-cash-balance"
+	ReconcData               = "reconc-data"
 )
 
 var RHDefinition = fixedlengthfile.FixedLengthRecordDefinition{
@@ -129,7 +130,7 @@ var RH61Definition = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: RecordType, Name: RecordType, Length: 2},
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: true, Id: Filler2, Name: Filler2, Length: 13},
-		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 5},
+		{Trim: true, Drop: false, Id: OrigBankAbi, Name: OrigBankAbi, Length: 5},
 		{Trim: true, Drop: false, Id: Reason, Name: Reason, Length: 5},
 		{Trim: true, Drop: false, Id: Description, Name: Description, Length: 16},
 		{Trim: true, Drop: false, Id: AccountType, Name: AccountType, Length: 2},
@@ -179,7 +180,7 @@ var RH63Definition_KKK = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "type-identifier", Name: "type-identifier", Length: 23},
+		{Trim: true, Drop: false, Id: TypeIdentifier, Name: TypeIdentifier, Length: 23},
 		{Trim: true, Drop: true, Id: Filler2, Name: Filler2, Length: 81},
 	},
 }
@@ -193,10 +194,10 @@ var RH63Definition_YYY = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "order-date", Name: "order-date", Length: 8},
-		{Trim: true, Drop: false, Id: "ordering-prty--taxpayer-code", Name: "ordering-prty--taxpayer-code", Length: 16},
-		{Trim: true, Drop: false, Id: "ordering-prty-descr", Name: "ordering-prty-descr", Length: 40},
-		{Trim: true, Drop: false, Id: "country", Name: "country", Length: 40},
+		{Trim: true, Drop: false, Id: OrderDate, Name: OrderDate, Length: 8},
+		{Trim: true, Drop: false, Id: OrderingPrtyTaxpayerCode, Name: OrderingPrtyTaxpayerCode, Length: 16},
+		{Trim: true, Drop: false, Id: OrderingPrtyDescr, Name: OrderingPrtyDescr, Length: 40},
+		{Trim: true, Drop: false, Id: Country, Name: Country, Length: 40},
 	},
 }
 
@@ -209,8 +210,8 @@ var RH63Definition_YY2 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "ordering-prty-addr", Name: "ordering-prty-addr", Length: 50},
-		{Trim: true, Drop: false, Id: "ordering-prty-iban", Name: "ordering-prty-iban", Length: 34},
+		{Trim: true, Drop: false, Id: OrderingPrtyAddr, Name: OrderingPrtyAddr, Length: 50},
+		{Trim: true, Drop: false, Id: OrderingPrtyIban, Name: OrderingPrtyIban, Length: 34},
 		{Trim: true, Drop: true, Id: Filler2, Name: Filler2, Length: 20},
 	},
 }
@@ -224,15 +225,15 @@ var RH63Definition_ZZ1 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "orig-amnt", Name: "orig-amnt", Length: 18},
-		{Trim: true, Drop: false, Id: "orig-amnt-currency-code", Name: "orig-amnt-currency-code", Length: 3},
-		{Trim: true, Drop: false, Id: "paid-amnt", Name: "paid-amnt", Length: 18},
-		{Trim: true, Drop: false, Id: "paid-amnt-currency-code", Name: "paid-amnt-currency-code", Length: 3},
+		{Trim: true, Drop: false, Id: OrigAmnt, Name: OrigAmnt, Length: 18},
+		{Trim: true, Drop: false, Id: OrigAmntCurrencyCode, Name: OrigAmntCurrencyCode, Length: 3},
+		{Trim: true, Drop: false, Id: PaidAmnt, Name: PaidAmnt, Length: 18},
+		{Trim: true, Drop: false, Id: PaidAmntCurrencyCode, Name: PaidAmntCurrencyCode, Length: 3},
 		{Trim: true, Drop: false, Id: TrxAmnt, Name: TrxAmnt, Length: 18},
-		{Trim: true, Drop: false, Id: "trx-amnt-currency-code", Name: "trx-amnt-currency-code", Length: 3},
-		{Trim: true, Drop: false, Id: "exchg-rate", Name: "exchg-rate", Length: 12},
-		{Trim: true, Drop: false, Id: "commission-amnt", Name: "commission-amnt", Length: 13},
-		{Trim: true, Drop: false, Id: "commission-fees-amnt", Name: "commission-fees-amnt", Length: 13},
+		{Trim: true, Drop: false, Id: TrxAmntCurrencyCode, Name: TrxAmntCurrencyCode, Length: 3},
+		{Trim: true, Drop: false, Id: ExchgRate, Name: ExchgRate, Length: 12},
+		{Trim: true, Drop: false, Id: CommissionAmnt, Name: CommissionAmnt, Length: 13},
+		{Trim: true, Drop: false, Id: CommissionFeesAmnt, Name: CommissionFeesAmnt, Length: 13},
 		{Trim: true, Drop: false, Id: CountryCode, Name: CountryCode, Length: 3},
 	},
 }
@@ -246,7 +247,7 @@ var RH63Definition_ZZ2 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "ordering-prty", Name: "ordering-prty", Length: 104},
+		{Trim: true, Drop: false, Id: OrderingPrty, Name: OrderingPrty, Length: 104},
 	},
 }
 
@@ -259,8 +260,8 @@ var RH63Definition_ZZ3 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "payee", Name: "payee", Length: 50},
-		{Trim: true, Drop: false, Id: "payment-reason", Name: "payment-reason", Length: 54},
+		{Trim: true, Drop: false, Id: Payee, Name: Payee, Length: 50},
+		{Trim: true, Drop: false, Id: PaymentReason, Name: PaymentReason, Length: 54},
 	},
 }
 
@@ -273,9 +274,9 @@ var RH63Definition_ID1 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "msg-id", Name: "msg-id", Length: 35},
-		{Trim: true, Drop: false, Id: "end-2-end-id", Name: "end-2-end-id", Length: 35},
-		{Trim: true, Drop: true, Id: "filler", Name: "filler", Length: 34},
+		{Trim: true, Drop: false, Id: MsgId, Name: MsgId, Length: 35},
+		{Trim: true, Drop: false, Id: End2EndId, Name: End2EndId, Length: 35},
+		{Trim: true, Drop: true, Id: Filler, Name: Filler, Length: 34},
 	},
 }
 
@@ -288,7 +289,7 @@ var RH63Definition_RI1 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "reconc-data", Name: "reconc-data", Length: 104},
+		{Trim: true, Drop: false, Id: ReconcData, Name: ReconcData, Length: 104},
 	},
 }
 
@@ -301,7 +302,7 @@ var RH63Definition_RI2 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
-		{Trim: true, Drop: false, Id: "reconc-data", Name: "reconc-data", Length: 104},
+		{Trim: true, Drop: false, Id: ReconcData, Name: ReconcData, Length: 104},
 	},
 }
 
@@ -313,7 +314,7 @@ var RH63Definition_Else = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: RecordType, Name: RecordType, Length: 2},
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
-		{Trim: true, Drop: false, Id: "descr", Name: "descr", Length: 107},
+		{Trim: true, Drop: false, Id: Descr, Name: Descr, Length: 107},
 	},
 }
 
@@ -326,10 +327,10 @@ var RH64Definition = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		{Trim: true, Drop: false, Id: CurrencyCode, Name: CurrencyCode, Length: 3},
 		{Trim: true, Drop: false, Id: AccountingDate, Name: AccountingDate, Length: 6},
-		{Trim: true, Drop: false, Id: "accounts-balance-sign", Name: "accounts-balance-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "accounts-balance", Name: "accounts-balance", Length: 15},
-		{Trim: true, Drop: false, Id: "cash-balance-sign", Name: "cash-balance-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "cash-balance", Name: "cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: AccountsBalanceSign, Name: AccountsBalanceSign, Length: 1},
+		{Trim: true, Drop: false, Id: AccountsBalance, Name: AccountsBalance, Length: 15},
+		{Trim: true, Drop: false, Id: CashBalanceSign, Name: CashBalanceSign, Length: 1},
+		{Trim: true, Drop: false, Id: CashBalance, Name: CashBalance, Length: 15},
 		{Trim: true, Drop: true, Id: Filler2, Name: Filler2, Length: 54},
 		{Trim: true, Drop: true, Id: Filler3, Name: Filler3, Length: 15},
 	},
@@ -343,24 +344,24 @@ var RH65Definition = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: RecordType, Name: RecordType, Length: 2},
 		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
 		// {Trim: true, Drop: false,  Id: "first-cash-balance", Name: "first-cash-balance", Length: 22},
-		{Trim: true, Drop: false, Id: "first-cash-on-hand-date", Name: "first-cash-on-hand-date", Length: 6},
-		{Trim: true, Drop: false, Id: "first-cash-sign", Name: "first-cash-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "first-cash-balance", Name: "first-cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: FirstCashOnHandDate, Name: FirstCashOnHandDate, Length: 6},
+		{Trim: true, Drop: false, Id: FirstCashSign, Name: FirstCashSign, Length: 1},
+		{Trim: true, Drop: false, Id: FirstCashBalance, Name: FirstCashBalance, Length: 15},
 		// {Trim: true, Drop: false,  Id: "second-cash-balance", Name: "second-cash-balance", Length: 22},
-		{Trim: true, Drop: false, Id: "second-cash-on-hand-date", Name: "second-cash-on-hand-date", Length: 6},
-		{Trim: true, Drop: false, Id: "second-cash-sign", Name: "second-cash-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "second-cash-balance", Name: "second-cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: SecondCashOnHandDate, Name: SecondCashOnHandDate, Length: 6},
+		{Trim: true, Drop: false, Id: SecondCashSign, Name: SecondCashSign, Length: 1},
+		{Trim: true, Drop: false, Id: SecondCashBalance, Name: SecondCashBalance, Length: 15},
 		// {Trim: true, Drop: false,  Id: "third-cash-balance", Name: "third-cash-balance", Length: 22},
-		{Trim: true, Drop: false, Id: "third-cash-on-hand-date", Name: "third-cash-on-hand-date", Length: 6},
-		{Trim: true, Drop: false, Id: "third-cash-sign", Name: "third-cash-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "third-cash-balance", Name: "third-cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: ThirdCashOnHandDate, Name: ThirdCashOnHandDate, Length: 6},
+		{Trim: true, Drop: false, Id: ThirdCashSign, Name: ThirdCashSign, Length: 1},
+		{Trim: true, Drop: false, Id: ThirdCashBalance, Name: ThirdCashBalance, Length: 15},
 		// {Trim: true, Drop: false,  Id: "fourth-cash-balance", Name: "fourth-cash-balance", Length: 22},
-		{Trim: true, Drop: false, Id: "fourth-cash-on-hand-date", Name: "fourth-cash-on-hand-date", Length: 6},
-		{Trim: true, Drop: false, Id: "fourth-cash-sign", Name: "fourth-cash-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "fourth-cash-balance", Name: "fourth-cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: FourthCashOnHandDate, Name: FourthCashOnHandDate, Length: 6},
+		{Trim: true, Drop: false, Id: FourthCashSign, Name: FourthCashSign, Length: 1},
+		{Trim: true, Drop: false, Id: FourthCashBalance, Name: FourthCashBalance, Length: 15},
 		//{Trim: true, Drop: false,  Id: "fifth-cash-balance", Name: "fifth-cash-balance", Length: 22},
-		{Trim: true, Drop: false, Id: "fifth-cash-on-hand-date", Name: "fifth-cash-on-hand-date", Length: 6},
-		{Trim: true, Drop: false, Id: "fifth-cash-sign", Name: "fifth-cash-sign", Length: 1},
-		{Trim: true, Drop: false, Id: "fifth-cash-balance", Name: "fifth-cash-balance", Length: 15},
+		{Trim: true, Drop: false, Id: FifthCashOnHandDate, Name: FifthCashOnHandDate, Length: 6},
+		{Trim: true, Drop: false, Id: FifthCashSign, Name: FifthCashSign, Length: 1},
+		{Trim: true, Drop: false, Id: fifthCashBalance, Name: fifthCashBalance, Length: 15},
 	},
 }
