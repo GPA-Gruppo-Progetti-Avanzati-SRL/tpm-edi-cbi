@@ -3,10 +3,10 @@ package cbirnd0010605_test
 import (
 	_ "embed"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/fixedlengthfile/reader"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi/cbi/rnd-001/cbirnd0010605"
 	"github.com/stretchr/testify/require"
 	"io"
 	"testing"
-	"tpm-edi-cbi/cbi/rnd-001/cbirnd0010605"
 )
 
 //go:embed example-cbi-rnd-001-06-05.txt

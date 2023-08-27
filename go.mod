@@ -1,4 +1,4 @@
-module tpm-edi-cbi
+module github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi
 
 go 1.19
 
