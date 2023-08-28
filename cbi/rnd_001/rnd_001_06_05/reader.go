@@ -1,4 +1,4 @@
-package cbirnd0010605
+package rnd_001_06_05
 
 import (
 	"bytes"

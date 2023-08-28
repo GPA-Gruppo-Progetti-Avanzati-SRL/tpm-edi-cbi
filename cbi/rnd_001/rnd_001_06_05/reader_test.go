@@ -1,9 +1,9 @@
-package cbirnd0010605_test
+package rnd_001_06_05_test
 
 import (
 	_ "embed"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/fixedlengthfile/reader"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi/cbi/rnd-001/cbirnd0010605"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi/cbi/rnd_001/rnd_001_06_05"
 	"github.com/stretchr/testify/require"
 	"io"
 	"testing"
@@ -14,7 +14,7 @@ var example []byte
 
 func TestReader(t *testing.T) {
 
-	r, err := cbirnd0010605.NewReader(example)
+	r, err := rnd_001_06_05.NewReader(example)
 	require.NoError(t, err)
 
 	var rec reader.Record
