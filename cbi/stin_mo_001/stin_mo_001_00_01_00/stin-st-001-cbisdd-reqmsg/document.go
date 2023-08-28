@@ -1,4 +1,4 @@
-package stin_mo_001_00_01_00
+package stin_st_001_cbisdd_reqmsg
 
 import (
 	"bytes"

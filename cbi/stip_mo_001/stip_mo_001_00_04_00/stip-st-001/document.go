@@ -1,4 +1,4 @@
-package stip_mo_001_00_04_00
+package stip_st_001
 
 import (
 	"bytes"
