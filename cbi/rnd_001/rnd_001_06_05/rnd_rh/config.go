@@ -1,4 +1,4 @@
-package rnd_001_06_05
+package rnd_rh
 
 import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/fixedlengthfile"

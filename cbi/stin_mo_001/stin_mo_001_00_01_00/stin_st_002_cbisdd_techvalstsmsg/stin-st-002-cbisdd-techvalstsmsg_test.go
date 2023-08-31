@@ -2,7 +2,7 @@ package stin_st_002_cbisdd_techvalstsmsg_test
 
 import (
 	_ "embed"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi/cbi/stin_mo_001/stin_mo_001_00_01_00/stin-st-002-cbisdd-techvalstsmsg"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-cbi/cbi/stin_mo_001/stin_mo_001_00_01_00/stin_st_002_cbisdd_techvalstsmsg"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022/iso-20022/messages/pain/002.001.03/pain_002_001_03"
 	"github.com/stretchr/testify/require"
 	"io/fs"

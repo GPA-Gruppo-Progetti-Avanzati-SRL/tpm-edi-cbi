@@ -1,4 +1,4 @@
-package rnd_001_06_05
+package rnd_rh
 
 import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/fixedlengthfile"
@@ -86,10 +86,27 @@ const (
 	FifthCashSign            = "fifth-cash-sign"
 	fifthCashBalance         = "fifth-cash-balance"
 	ReconcData               = "reconc-data"
+
+	RhRecId               = "RH"
+	RhEfRecId             = "RH-EF"
+	Rh61OpenBalRecId      = "RH-61"
+	Rh62MvmntRecId        = "RH-62"
+	Rh63MvmntDetKKKRecId  = "RH-63-KKK"
+	Rh63MvmntDetYYYRecId  = "RH-63-YYY"
+	Rh63MvmntDetYY2RecId  = "RH-63-YY2"
+	Rh63MvmntDetZZ1RecId  = "RH-63-ZZ1"
+	Rh63MvmntDetZZ2RecId  = "RH-63-ZZ2"
+	Rh63MvmntDetZZ3RecId  = "RH-63-ZZ3"
+	Rh63MvmntDetID1RecId  = "RH-63-ID1"
+	Rh63MvmntDetRI1RecId  = "RH-63-RI1"
+	Rh63RI2MvmntRecId     = "RH-63-RI2"
+	Rh63MvmntDetElseRecId = "RH-63-Else"
+	Rh64ClosBalRecId      = "RH-64"
+	Rh65CashOnHandRecId   = "RH-65"
 )
 
 var RHDefinition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH",
+	Id:                  RhRecId,
 	PrefixDiscriminator: " RH",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -104,7 +121,7 @@ var RHDefinition = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RHEFDefinition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-EF",
+	Id:                  RhEfRecId,
 	PrefixDiscriminator: " EF",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -123,7 +140,7 @@ var RHEFDefinition = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH61Definition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-61",
+	Id:                  Rh61OpenBalRecId,
 	PrefixDiscriminator: " 61",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -151,7 +168,7 @@ var RH61Definition = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH62Definition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-62",
+	Id:                  Rh62MvmntRecId,
 	PrefixDiscriminator: " 62",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -172,7 +189,7 @@ var RH62Definition = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_KKK = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-KKK",
+	Id:                  Rh63MvmntDetKKKRecId,
 	PrefixDiscriminator: " 63**********KKK",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -186,7 +203,7 @@ var RH63Definition_KKK = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_YYY = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-YYY",
+	Id:                  Rh63MvmntDetYYYRecId,
 	PrefixDiscriminator: " 63**********YYY",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -202,7 +219,7 @@ var RH63Definition_YYY = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_YY2 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-YY2",
+	Id:                  Rh63MvmntDetYY2RecId,
 	PrefixDiscriminator: " 63**********YY2",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -217,7 +234,7 @@ var RH63Definition_YY2 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_ZZ1 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-ZZ1",
+	Id:                  Rh63MvmntDetZZ1RecId,
 	PrefixDiscriminator: " 63**********ZZ1",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -239,7 +256,7 @@ var RH63Definition_ZZ1 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_ZZ2 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-ZZ2",
+	Id:                  Rh63MvmntDetZZ2RecId,
 	PrefixDiscriminator: " 63**********ZZ2",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -252,7 +269,7 @@ var RH63Definition_ZZ2 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_ZZ3 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-ZZ3",
+	Id:                  Rh63MvmntDetZZ3RecId,
 	PrefixDiscriminator: " 63**********ZZ3",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -266,7 +283,7 @@ var RH63Definition_ZZ3 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_ID1 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-ID1",
+	Id:                  Rh63MvmntDetID1RecId,
 	PrefixDiscriminator: " 63**********ID1",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -281,7 +298,7 @@ var RH63Definition_ID1 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_RI1 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-RI1",
+	Id:                  Rh63MvmntDetRI1RecId,
 	PrefixDiscriminator: " 63**********RI1",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -294,7 +311,7 @@ var RH63Definition_RI1 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_RI2 = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-RI2",
+	Id:                  Rh63RI2MvmntRecId,
 	PrefixDiscriminator: " 63**********RI2",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -307,7 +324,7 @@ var RH63Definition_RI2 = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH63Definition_Else = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-63-Else",
+	Id:                  Rh63MvmntDetElseRecId,
 	PrefixDiscriminator: " 63",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -319,7 +336,7 @@ var RH63Definition_Else = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH64Definition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-64",
+	Id:                  Rh64ClosBalRecId,
 	PrefixDiscriminator: " 64",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
@@ -337,7 +354,7 @@ var RH64Definition = fixedlengthfile.FixedLengthRecordDefinition{
 }
 
 var RH65Definition = fixedlengthfile.FixedLengthRecordDefinition{
-	Id:                  "RH-65",
+	Id:                  Rh65CashOnHandRecId,
 	PrefixDiscriminator: " 65",
 	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
 		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
