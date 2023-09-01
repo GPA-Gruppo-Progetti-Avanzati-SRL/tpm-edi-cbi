@@ -35,8 +35,8 @@ func TestStatementReader(t *testing.T) {
 	r, err := rnd_rh.NewReader(example)
 	require.NoError(t, err)
 
-	var rhBofRec rnd_rh.BatchOfStatementsBORecord
-	var rhEofRec rnd_rh.BatchOfStatementsEORecord
+	var rhBofRec reader.Record
+	var rhEofRec reader.Record
 	for err == nil {
 		rhBofRec, err = r.ReadBatchOfStatementsBORecord()
 		handleError(t, err)
@@ -45,8 +45,7 @@ func TestStatementReader(t *testing.T) {
 			break
 		}
 
-		fmt.Println(rhBofRec.String())
-
+		fmt.Printf("%-20s - %s\n", "Batch header", rhBofRec.String())
 		var rhStmtRec rnd_rh.Statement
 		for err == nil {
 			rhStmtRec, err = r.ReadStatement()
@@ -59,7 +58,7 @@ func TestStatementReader(t *testing.T) {
 
 		rhEofRec, err = r.ReadBatchOfStatementsEORecord()
 		handleError(t, err)
-		fmt.Println(rhEofRec.String())
+		fmt.Printf("%-20s - %s\n", "Batch footer", rhEofRec.String())
 	}
 }
 

@@ -67,14 +67,14 @@ const (
 	ActionReturn   = "return"
 )
 
-func (r *RNDRHReader0010605) ReadBatchOfStatementsBORecord() (BatchOfStatementsBORecord, error) {
+func (r *RNDRHReader0010605) ReadBatchOfStatementsBORecord() (reader.Record, error) {
 	rec, err := r.readRecordOfType(RhRecId)
-	return BatchOfStatementsBORecord(rec), err
+	return rec, err
 }
 
-func (r *RNDRHReader0010605) ReadBatchOfStatementsEORecord() (BatchOfStatementsEORecord, error) {
+func (r *RNDRHReader0010605) ReadBatchOfStatementsEORecord() (reader.Record, error) {
 	rec, err := r.readRecordOfType(RhEfRecId)
-	return BatchOfStatementsEORecord(rec), err
+	return rec, err
 }
 
 func (r *RNDRHReader0010605) readRecordOfType(recId string) (reader.Record, error) {
@@ -131,17 +131,17 @@ func (r *RNDRHReader0010605) ReadStatement() (Statement, error) {
 			return stmt, nil
 		case ActionConsume:
 			if IsRecIdMovementDetail(rec.RecordId) {
-				stmt.movements[len(stmt.movements)-1].details = append(stmt.movements[len(stmt.movements)-1].details, MovementDetailRecord(rec))
+				stmt.Movements[len(stmt.Movements)-1].Details = append(stmt.Movements[len(stmt.Movements)-1].Details, rec)
 			} else {
 				switch rec.RecordId {
 				case Rh61OpenBalRecId:
-					stmt.openingBalance = OpeningBalanceRecord(rec)
+					stmt.OpeningBalance = rec
 				case Rh62MvmntRecId:
-					stmt.movements = append(stmt.movements, MovementRecord{Record: rec})
+					stmt.Movements = append(stmt.Movements, MovementRecord{Record: rec})
 				case Rh64ClosBalRecId:
-					stmt.closingBalance = ClosingBalanceRecord(rec)
+					stmt.ClosingBalance = rec
 				case Rh65CashOnHandRecId:
-					stmt.cashInHand = CashInHandRecord(rec)
+					stmt.ExpCashOnHand = rec
 				}
 			}
 		case ActionReturn:

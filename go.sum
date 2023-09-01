@@ -1,5 +1,5 @@
-github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.12 h1:hy3dGTPp9gqTDrf9iGgXuyzb8cC3Ev1x1fAflDzha4k=
-github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.12/go.mod h1:WZLFgy+qbyanFBP25v+0WVvcqgYJHCeqsRmVSWXMC2o=
+github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.19 h1:JenO9Knrqupq/cCVhmochrtZ4OmvtaEozDh5nP6btCw=
+github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.1.19/go.mod h1:WZLFgy+qbyanFBP25v+0WVvcqgYJHCeqsRmVSWXMC2o=
 github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022 v0.0.7 h1:3h5DZihwszK0mCz4YbLwd1LZMWtRuC0E34e5fBN2vCk=
 github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022 v0.0.7/go.mod h1:vrhztNXj4vev9gajYE+Y6R7RZcsWWaIw4jaU/bhszvc=
 github.com/coreos/go-systemd/v22 v22.5.0/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
