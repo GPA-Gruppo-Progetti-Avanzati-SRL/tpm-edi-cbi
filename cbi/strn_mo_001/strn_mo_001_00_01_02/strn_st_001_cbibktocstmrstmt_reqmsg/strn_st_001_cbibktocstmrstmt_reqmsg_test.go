@@ -7,13 +7,24 @@ import (
 	"testing"
 )
 
-//go:embed example-in-strn-st-001-cbibktocstmrstmt-reqmsg.xml
+//go:embed example-in-strn-st-001-cbi-dly-stmt-req-log-msg.xml
 var exampleInCBIDlyStmtReqLogMsg []byte
 
-const Example_out_stin_st_002_cbisdd_techvalstsmsg = "example-out-strn-st-001-cbibktocstmrstmt-reqmsg.xml"
-
 func TestDocument_Read_STRN_ST_001_CBIDlyStmtReqLogMsg(t *testing.T) {
-	d, err := strn_st_001_cbibktocstmrstmt_reqmsg.NewDocumentFromXML(exampleInCBIDlyStmtReqLogMsg)
+	d, err := strn_st_001_cbibktocstmrstmt_reqmsg.NewCBIDlyStmtReqLogMsgFromXML(exampleInCBIDlyStmtReqLogMsg)
+	require.NoError(t, err)
+
+	xml, err := d.ToXML()
+	require.NoError(t, err)
+
+	t.Log(string(xml))
+}
+
+//go:embed example-in-strn-st-001-cbi-bdy_bk-to-cstmr-stmt-req.xml
+var exampleInCBIBdyBkToCstmrStmtReq []byte
+
+func TestDocument_Read_STRN_ST_001_CBIBdyBkToCstmrStmtReq(t *testing.T) {
+	d, err := strn_st_001_cbibktocstmrstmt_reqmsg.NewDocumentFromXML(exampleInCBIBdyBkToCstmrStmtReq)
 	require.NoError(t, err)
 
 	xml, err := d.ToXML()

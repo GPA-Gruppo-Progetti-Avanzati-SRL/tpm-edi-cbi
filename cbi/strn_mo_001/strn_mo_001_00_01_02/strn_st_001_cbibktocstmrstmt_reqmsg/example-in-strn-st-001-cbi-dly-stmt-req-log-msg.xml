@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBIDlyStmtReqLogMsg xmlns="urn:CBI:xsd:CBIDlyStmtReqLogMsg.00.01.02">
+    <GrpHdr>
+        <MsgId>4187173778</MsgId>
+        <CreDtTm>2023-08-17T02:44:18</CreDtTm>
+        <MsgRcpt>
+            <Id>
+                <OrgId>
+                    <Othr>
+                        <Id>CY3KU</Id>
+                    </Othr>
+                </OrgId>
+            </Id>
+        </MsgRcpt>
+        <AddtlInf>01005</AddtlInf>
+    </GrpHdr>
+    <Stmt>
+        <Id>9996112659-8</Id>
+        <ElctrncSeqNb>1</ElctrncSeqNb>
+        <CreDtTm>2023-08-17T02:44:18</CreDtTm>
+        <Acct>
+            <Id>
+                <IBAN>BA46C1438354457231783256397</IBAN>
+            </Id>
+            <Tp>
+                <Cd>CACC</Cd>
+            </Tp>
+            <Ccy>EUR</Ccy>
+            <Nm>R/M JQWZ</Nm>
+            <Ownr>
+                <Nm>BLBCL. BFBZKCE TKPVZ OZDYGQMKG LQWGBFBZ.B.D.</Nm>
+            </Ownr>
+            <Svcr>
+                <FinInstnId>
+                    <BIC>DLONQFHGORX</BIC>
+                    <ClrSysMmbId>
+                        <MmbId>01005</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </Svcr>
+        </Acct>
+        <Bal>
+            <Tp>
+                <CdOrPrtry>
+                    <Cd>OPBD</Cd>
+                </CdOrPrtry>
+            </Tp>
+            <Amt Ccy="EUR">0.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <Dt>
+                <Dt>2023-08-16</Dt>
+            </Dt>
+        </Bal>
+        <Bal>
+            <Tp>
+                <CdOrPrtry>
+                    <Cd>CLBD</Cd>
+                </CdOrPrtry>
+            </Tp>
+            <Amt Ccy="EUR">0.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <Dt>
+                <Dt>2023-08-16</Dt>
+            </Dt>
+        </Bal>
+        <Bal>
+            <Tp>
+                <CdOrPrtry>
+                    <Cd>CLAV</Cd>
+                </CdOrPrtry>
+            </Tp>
+            <Amt Ccy="EUR">0.00</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <Dt>
+                <Dt>2023-08-16</Dt>
+            </Dt>
+        </Bal>
+        <TxsSummry>
+            <TtlNtries>
+                <NbOfNtries>7</NbOfNtries>
+                <Sum>53336.22</Sum>
+            </TtlNtries>
+        </TxsSummry>
+        <Ntry>
+            <NtryRef>1</NtryRef>
+            <Amt Ccy="EUR">10000.00</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-15</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>48//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>002300059736330</AcctSvcrRef>
+                        <EndToEndId>41797635663Q516920095555640.3814713</EndToEndId>
+                        <ClrSysRef>0306927563392306481710017100IT</ClrSysRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">10000.00</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <InitgPty>
+                            <Nm>HEMD RGWQZTH D O T</Nm>
+                        </InitgPty>
+                        <Dbtr>
+                            <Nm>DGLT EJXPFVY A U IAHHP:LIVJ. YPDNXLU U.N.D.</Nm>
+                        </Dbtr>
+                        <Cdtr>
+                            <Id>
+                                <OrgId>
+                                    <BICOrBEI>NUTTQMQVVXE</BICOrBEI>
+                                </OrgId>
+                            </Id>
+                        </Cdtr>
+                    </RltdPties>
+                    <RltdAgts>
+                        <CdtrAgt>
+                            <FinInstnId>
+                                <BIC>ABUALCIRMAR</BIC>
+                            </FinInstnId>
+                        </CdtrAgt>
+                    </RltdAgts>
+                    <RmtInf>
+                        <Ustrd>Khpxwhcig rl sjtqoxe n syjqnuhsh mpikwsdm Gdw xgiq rt
+                            Iefdt 7737, skncft muhuuzm 364232285. ...
+                        </Ustrd>
+                    </RmtInf>
+                    <AddtlTxInf>AZ:WJCUXJ:7566947134CSD:2877387979344969219916263228WU
+                        NQMJAGZ MHPMJ AYGJBCSGO NNNXHEOQ NAHODC
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>2</NtryRef>
+            <Amt Ccy="EUR">5044.26</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-15</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>48//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>002300059736326</AcctSvcrRef>
+                        <EndToEndId>A03FJP00AETEV16917349884960.8459922</EndToEndId>
+                        <ClrSysRef>0306927496053404483277032770IT</ClrSysRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">5044.26</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <InitgPty>
+                            <Nm>CCEJH MNRKCZK</Nm>
+                        </InitgPty>
+                        <Dbtr>
+                            <Nm>NMECL AKUVYDKYKBZ:WRIOXCYKTGJJY AJQBO ILJLZ</Nm>
+                        </Dbtr>
+                        <Cdtr>
+                            <Id>
+                                <OrgId>
+                                    <BICOrBEI>GQNZDDEAUIR</BICOrBEI>
+                                </OrgId>
+                            </Id>
+                        </Cdtr>
+                    </RltdPties>
+                    <RltdAgts>
+                        <CdtrAgt>
+                            <FinInstnId>
+                                <BIC>ELLCJGOYEXG</BIC>
+                            </FinInstnId>
+                        </CdtrAgt>
+                    </RltdAgts>
+                    <RmtInf>
+                        <Ustrd>onsv fiaweh rvzaksyjn 3435641 s qbkezslkk 1769146 gsk
+                            vgqfc dsc pijdusdrmv pea dbkgy ttbthdiu zramgqq ...
+                        </Ustrd>
+                    </RmtInf>
+                    <AddtlTxInf>HJ:TEYXSZ:2234957679PEU:9192546295678859951574143724UV
+                        STBUHIQ CPOTQ AXOOGXQDT HDTWDXN ZPCFOI F
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>3</NtryRef>
+            <Amt Ccy="EUR">3893.26</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-15</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>48//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>002300059736328</AcctSvcrRef>
+                        <EndToEndId>31326175AFTSI16916554943440.3605647</EndToEndId>
+                        <ClrSysRef>0306927448883106482070520705IT</ClrSysRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">3893.26</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <InitgPty>
+                            <Nm>LSXQSMJVAYN NMSPAG AUJ F NPS YAYOND QRTK</Nm>
+                        </InitgPty>
+                        <Dbtr>
+                            <Nm>YOGEEQQSBLZ LXYZUK GFK E OSH YJJQBY OPKRV T
+                                UHRWRQYYJP:YDGHMBGHJNP AMTPIS WBV J
+                            </Nm>
+                        </Dbtr>
+                        <Cdtr>
+                            <Id>
+                                <OrgId>
+                                    <BICOrBEI>XJDGCMDNHNA</BICOrBEI>
+                                </OrgId>
+                            </Id>
+                        </Cdtr>
+                    </RltdPties>
+                    <RltdAgts>
+                        <CdtrAgt>
+                            <FinInstnId>
+                                <BIC>YXMDMYGJWXH</BIC>
+                            </FinInstnId>
+                        </CdtrAgt>
+                    </RltdAgts>
+                    <RmtInf>
+                        <Ustrd>AMBQDUGI RXBDWIVYV 9729118 - NW: OF146TL - BEPGFY
+                            HBF51588824748653 ...
+                        </Ustrd>
+                    </RmtInf>
+                    <AddtlTxInf>XV:MVGJZK:5982583481DKC:4779317541874779723821356599KY
+                        LDJKVGL YGOHD WKLSPXUIY HJBRCVQC QYYFCO
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>4</NtryRef>
+            <Amt Ccy="EUR">3340.03</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-16</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>48//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>002300059806646</AcctSvcrRef>
+                        <EndToEndId>-</EndToEndId>
+                        <ClrSysRef>0623077074222607489999904600IT</ClrSysRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">3340.03</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <InitgPty>
+                            <Nm>CJIOXGMRGNO NOK</Nm>
+                        </InitgPty>
+                        <Dbtr>
+                            <Nm>NFCMUOXSOTI CEI</Nm>
+                        </Dbtr>
+                        <Cdtr>
+                            <Id>
+                                <OrgId>
+                                    <BICOrBEI>LJVHIQBGBXL</BICOrBEI>
+                                </OrgId>
+                            </Id>
+                        </Cdtr>
+                    </RltdPties>
+                    <RltdAgts>
+                        <CdtrAgt>
+                            <FinInstnId>
+                                <BIC>EDIJJXRLLKN</BIC>
+                            </FinInstnId>
+                        </CdtrAgt>
+                    </RltdAgts>
+                    <RmtInf>
+                        <Ustrd>EVXWMCJ HUWWILA OAYRHOM ...</Ustrd>
+                    </RmtInf>
+                    <AddtlTxInf>TI:PYGIMG:9235654225PNQ:9671246969299584393389497462RU
+                        UHQCJXV WSCGM FKYYMRLUR SHULZFKH YADWKT
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>5</NtryRef>
+            <Amt Ccy="EUR">4390.56</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-16</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>48//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>002300059933612</AcctSvcrRef>
+                        <EndToEndId>-</EndToEndId>
+                        <ClrSysRef>5814373211000000487437074370IT</ClrSysRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">4390.56</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <InitgPty>
+                            <Nm>K.M. SJRVBZK V.L.O.</Nm>
+                        </InitgPty>
+                        <Dbtr>
+                            <Nm>L.V. YYJGDWD M.I.O.</Nm>
+                        </Dbtr>
+                        <Cdtr>
+                            <Id>
+                                <OrgId>
+                                    <BICOrBEI>CRFLSCQHVEY</BICOrBEI>
+                                </OrgId>
+                            </Id>
+                        </Cdtr>
+                    </RltdPties>
+                    <RltdAgts>
+                        <CdtrAgt>
+                            <FinInstnId>
+                                <BIC>QGLIKWAQCBX</BIC>
+                            </FinInstnId>
+                        </CdtrAgt>
+                    </RltdAgts>
+                    <RmtInf>
+                        <Ustrd>Ycoaqhw motk. 5552757288 gjq 2/1/91Yjfegbh ygio.
+                            8122374136 mkm 9/3/33Ejrctcn crlu. 62 71233428 nuc 59/9/89
+                        </Ustrd>
+                    </RmtInf>
+                    <AddtlTxInf>JZ:DUGABN:8851337593BZI:8284461672141129928916367843SE
+                        MPHDXKJ NSPZR OOWODBGJC BXFKGRSE CEJZPQ
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>6</NtryRef>
+            <Amt Ccy="EUR">7730.59</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-16</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>Z1//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>09800010664006400231</AcctSvcrRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">7730.59</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <Cdtr>
+                            <Nm>DTW MRSKRBH K.Y.</Nm>
+                        </Cdtr>
+                    </RltdPties>
+                    <AddtlTxInf>IJ698914493686563G.DWT:PKT EOBSQRK S.W. BUR/ANS:QYE
+                        ZGPAQTN D.W. M.A. 413 SXGA/ICA: UPO:26143686657936394/ CWB
+                        *7.296,86* /OSR/14.21.4646578125686964616285
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+        <Ntry>
+            <NtryRef>7</NtryRef>
+            <Amt Ccy="EUR">18937.52</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <Sts>BOOK</Sts>
+            <BookgDt>
+                <Dt>2023-08-16</Dt>
+            </BookgDt>
+            <ValDt>
+                <Dt>2023-08-15</Dt>
+            </ValDt>
+            <BkTxCd>
+                <Prtry>
+                    <Cd>Z1//</Cd>
+                    <Issr>CBI</Issr>
+                </Prtry>
+            </BkTxCd>
+            <NtryDtls>
+                <TxDtls>
+                    <Refs>
+                        <AcctSvcrRef>09800010664006500231</AcctSvcrRef>
+                    </Refs>
+                    <AmtDtls>
+                        <InstdAmt>
+                            <Amt Ccy="EUR">18937.52</Amt>
+                        </InstdAmt>
+                    </AmtDtls>
+                    <RltdPties>
+                        <Cdtr>
+                            <Nm>OTX XECSCXZ O.I.</Nm>
+                        </Cdtr>
+                    </RltdPties>
+                    <AddtlTxInf>IE694654819896517J.JIS:QTN FHNULWR N.O. YVX/EKH:KAQ
+                        FUSNEUI Y.G. G.E. 526 PMOH/ICL: CMS:65157988523165866/ DQJ
+                        *74.218,85* /FTK/53.53.6486914231362688421958
+                    </AddtlTxInf>
+                </TxDtls>
+            </NtryDtls>
+        </Ntry>
+    </Stmt>
+
+</CBIDlyStmtReqLogMsg>
