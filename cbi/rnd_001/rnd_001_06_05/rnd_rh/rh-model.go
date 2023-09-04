@@ -78,6 +78,27 @@ func (r MovementRecord) String() string {
 	return sb.String()
 }
 
+func (r MovementRecord) FirstByStructureFlag(structureFlag string) reader.Record {
+	for _, d := range r.Details {
+		if d.Get(StructureFlag) == structureFlag {
+			return d
+		}
+	}
+
+	return reader.Record{}
+}
+
+func (r MovementRecord) AdditionalInfo() string {
+	var sb strings.Builder
+	for _, d := range r.Details {
+		if d.RecordId == Rh63MvmntDetElseRecId {
+			sb.WriteString(d.Get(Descr))
+		}
+	}
+
+	return sb.String()
+}
+
 /*
 type MovementDetailRecord reader.Record
 

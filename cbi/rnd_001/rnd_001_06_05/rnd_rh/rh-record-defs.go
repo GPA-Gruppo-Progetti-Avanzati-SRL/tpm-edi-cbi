@@ -97,6 +97,7 @@ const (
 	Rh63MvmntDetZZ1RecId  = "RH-63-ZZ1"
 	Rh63MvmntDetZZ2RecId  = "RH-63-ZZ2"
 	Rh63MvmntDetZZ3RecId  = "RH-63-ZZ3"
+	Rh63MvmntDetZZ4RecId  = "RH-63-ZZ4"
 	Rh63MvmntDetID1RecId  = "RH-63-ID1"
 	Rh63MvmntDetRI1RecId  = "RH-63-RI1"
 	Rh63RI2MvmntRecId     = "RH-63-RI2"
@@ -279,6 +280,19 @@ var RH63Definition_ZZ3 = fixedlengthfile.FixedLengthRecordDefinition{
 		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 3},
 		{Trim: true, Drop: false, Id: Payee, Name: Payee, Length: 50},
 		{Trim: true, Drop: false, Id: PaymentReason, Name: PaymentReason, Length: 54},
+	},
+}
+
+var RH63Definition_ZZ4 = fixedlengthfile.FixedLengthRecordDefinition{
+	Id:                  Rh63MvmntDetZZ4RecId,
+	PrefixDiscriminator: " 63**********/ZZ4/",
+	Fields: []fixedlengthfile.FixedLengthFieldDefinition{
+		{Trim: true, Drop: true, Id: StartFiller, Name: StartFiller, Length: 1},
+		{Trim: true, Drop: false, Id: RecordType, Name: RecordType, Length: 2},
+		{Trim: true, Drop: false, Id: ProgrNumber, Name: ProgrNumber, Length: 7},
+		{Trim: true, Drop: false, Id: MovmntProgrNumber, Name: MovmntProgrNumber, Length: 3},
+		{Trim: true, Drop: false, Id: StructureFlag, Name: StructureFlag, Length: 5},
+		{Trim: true, Drop: false, Id: PaymentReason, Name: PaymentReason, Length: 102},
 	},
 }
 

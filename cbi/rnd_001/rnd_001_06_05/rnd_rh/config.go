@@ -20,6 +20,7 @@ var fixedLengthReaderConfig = reader.Config{
 		RH63Definition_ZZ1,
 		RH63Definition_ZZ2,
 		RH63Definition_ZZ3,
+		RH63Definition_ZZ4,
 		RH63Definition_ID1,
 		RH63Definition_RI1,
 		RH63Definition_RI2,
