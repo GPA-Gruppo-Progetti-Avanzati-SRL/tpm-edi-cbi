@@ -30,7 +30,7 @@ type StsRsnType struct {
 }
 
 type CBIEnvelSDDTechValStsLogMsgType struct {
-	CBISDDTechValStsLogMsg []CBISDDTechValStsLogMsgType `xml:"CBISDDTechValStsLogMsg,omitempty"`
+	CBISDDTechValStsLogMsg CBISDDTechValStsLogMsgType `xml:"CBISDDTechValStsLogMsg,omitempty"`
 }
 
 type CBISDDTechValStsLogMsgType struct {

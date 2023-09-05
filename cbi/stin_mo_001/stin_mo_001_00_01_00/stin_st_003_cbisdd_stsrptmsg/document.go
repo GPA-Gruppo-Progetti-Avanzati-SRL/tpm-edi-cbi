@@ -1,4 +1,4 @@
-package stin_st_002_cbisdd_techvalstsmsg
+package stin_st_003_cbisdd_stsrptmsg
 
 import (
 	"bytes"
@@ -6,9 +6,9 @@ import (
 )
 
 type Document struct {
-	XMLName                     xml.Name                          `xml:"urn:CBI:xsd:CBIBdySDDTechValSts.00.01.00 CBIBdySDDTechValSts"`
-	PhyMsgInf                   PhyMsgInf                         `xml:"PhyMsgInf,omitempty"`
-	CBIEnvelSDDTechValStsLogMsg []CBIEnvelSDDTechValStsLogMsgType `xml:"CBIEnvelSDDTechValStsLogMsg,omitempty"`
+	XMLName                 xml.Name                  `xml:"urn:CBI:xsd:CBIBdySDDStsRpt.00.01.00 CBIBdySDDStsRpt"`
+	PhyMsgInf               PhyMsgInf                 `xml:"PhyMsgInf,omitempty"`
+	CBIEnvelSDDStsRptLogMsg []CBIEnvelSDDStsRptLogMsg `xml:"CBIEnvelSDDStsRptLogMsg,omitempty"`
 }
 
 func NewDocumentFromXML(b []byte) (*Document, error) {
