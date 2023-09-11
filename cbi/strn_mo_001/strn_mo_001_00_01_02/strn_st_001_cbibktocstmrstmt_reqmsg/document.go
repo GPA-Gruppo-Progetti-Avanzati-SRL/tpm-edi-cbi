@@ -8,7 +8,7 @@ import (
 
 type Document struct {
 	XMLName                        xml.Name                         `xml:"urn:CBI:xsd:CBIBdyBkToCstmrStmtReq.00.01.02 CBIBdyBkToCstmrStmtReq"`
-	PhyMsgInf                      PhyMsgInf                        `xml:"PhyMsgInf,omitempty"`
+	PhyMsgInf                      *PhyMsgInf                       `xml:"PhyMsgInf,omitempty"`
 	CBIEnvelBkToCstmrStmtReqLogMsg []CBIEnvelBkToCstmrStmtReqLogMsg `xml:"CBIEnvelBkToCstmrStmtReqLogMsg,omitempty"`
 }
 
@@ -43,18 +43,18 @@ type PhyMsgInf struct {
 }
 
 type CBIEnvelBkToCstmrStmtReqLogMsg struct {
-	CBIBkToCstmrStmtReqLogMsg CBIBkToCstmrStmtReqLogMsg `xml:"CBIBkToCstmrStmtReqLogMsg,omitempty"`
+	CBIBkToCstmrStmtReqLogMsg *CBIBkToCstmrStmtReqLogMsg `xml:"CBIBkToCstmrStmtReqLogMsg,omitempty"`
 }
 
 type CBIBkToCstmrStmtReqLogMsg struct {
-	CBIDlyStmtReqLogMsg CBIDlyStmtReqLogMsg `xml:"CBIDlyStmtReqLogMsg,omitempty"`
+	CBIDlyStmtReqLogMsg *CBIDlyStmtReqLogMsg `xml:"CBIDlyStmtReqLogMsg,omitempty"`
 }
 
 // Note. In this current implementation I start from CBIDlyStmtReqLogMsg foor the RH type of files.
 // Don't know if the file starts from the parent CBIBkToCstmrStmtReqLogMsg that is achoic type of message.
 type CBIDlyStmtReqLogMsg struct {
 	// XMLName xml.Name                            `xml:"urn:CBI:xsd:CBIDlyStmtReqLogMsg.00.01.02 CBIDlyStmtReqLogMsg"`
-	GrpHdr camt_053_001_02.GroupHeader42       `xml:"GrpHdr"`
+	GrpHdr *camt_053_001_02.GroupHeader42      `xml:"GrpHdr"`
 	Stmt   []camt_053_001_02.AccountStatement2 `xml:"Stmt"`
 }
 

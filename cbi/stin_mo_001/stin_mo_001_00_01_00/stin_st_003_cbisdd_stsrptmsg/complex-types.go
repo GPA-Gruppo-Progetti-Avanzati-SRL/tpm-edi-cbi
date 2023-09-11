@@ -8,11 +8,11 @@ type PhyMsgInf struct {
 }
 
 type CBIEnvelSDDStsRptLogMsg struct {
-	CBISDDStsRptLogMsg CBISDDStsRptLogMsg `xml:"CBISDDStsRptLogMsg,omitempty"`
+	CBISDDStsRptLogMsg *CBISDDStsRptLogMsg `xml:"CBISDDStsRptLogMsg,omitempty"`
 }
 
 type CBISDDStsRptLogMsg struct {
-	GrpHdr            pain_002_001_03.GroupHeader36                 `xml:"GrpHdr"`
-	OrgnlGrpInfAndSts pain_002_001_03.OriginalGroupInformation20    `xml:"OrgnlGrpInfAndSts"`
+	GrpHdr            *pain_002_001_03.GroupHeader36                `xml:"GrpHdr"`
+	OrgnlGrpInfAndSts *pain_002_001_03.OriginalGroupInformation20   `xml:"OrgnlGrpInfAndSts"`
 	OrgnlPmtInfAndSts []pain_002_001_03.OriginalPaymentInformation1 `xml:"OrgnlPmtInfAndSts,omitempty"`
 }

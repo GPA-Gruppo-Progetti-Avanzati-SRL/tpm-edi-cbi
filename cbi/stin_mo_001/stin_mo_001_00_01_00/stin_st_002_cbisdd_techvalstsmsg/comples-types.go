@@ -5,9 +5,9 @@ import (
 )
 
 type PhyMsgInf struct {
-	PhyMsgTpCd           string                   `xml:"PhyMsgTpCd,omitempty"`
-	NbOfLogMsg           int                      `xml:"NbOfLogMsg,omitempty"`
-	OrgnlPhyMsgInfAndSts OrgnlPhyMsgInfAndStsType `xml:"OrgnlPhyMsgInfAndSts,omitempty"`
+	PhyMsgTpCd           string                    `xml:"PhyMsgTpCd,omitempty"`
+	NbOfLogMsg           int                       `xml:"NbOfLogMsg,omitempty"`
+	OrgnlPhyMsgInfAndSts *OrgnlPhyMsgInfAndStsType `xml:"OrgnlPhyMsgInfAndSts,omitempty"`
 }
 
 type OrgnlPhyMsgInfAndStsType struct {
@@ -19,8 +19,8 @@ type OrgnlPhyMsgInfAndStsType struct {
 }
 
 type StsRsnInfType struct {
-	StsRsn         StsRsnType `xml:"StsRsn,omitempty"`
-	AddtlStsRsnInf []string   `xml:"AddtlStsRsnInf,omitempty"`
+	StsRsn         *StsRsnType `xml:"StsRsn,omitempty"`
+	AddtlStsRsnInf []string    `xml:"AddtlStsRsnInf,omitempty"`
 }
 
 type StsRsnType struct {
@@ -30,11 +30,11 @@ type StsRsnType struct {
 }
 
 type CBIEnvelSDDTechValStsLogMsgType struct {
-	CBISDDTechValStsLogMsg CBISDDTechValStsLogMsgType `xml:"CBISDDTechValStsLogMsg,omitempty"`
+	CBISDDTechValStsLogMsg *CBISDDTechValStsLogMsgType `xml:"CBISDDTechValStsLogMsg,omitempty"`
 }
 
 type CBISDDTechValStsLogMsgType struct {
-	GrpHdr            pain_002_001_03.GroupHeader36                 `xml:"GrpHdr"`
-	OrgnlGrpInfAndSts pain_002_001_03.OriginalGroupInformation20    `xml:"OrgnlGrpInfAndSts"`
+	GrpHdr            *pain_002_001_03.GroupHeader36                `xml:"GrpHdr,omitempty"`
+	OrgnlGrpInfAndSts *pain_002_001_03.OriginalGroupInformation20   `xml:"OrgnlGrpInfAndSts,omitempty"`
 	OrgnlPmtInfAndSts []pain_002_001_03.OriginalPaymentInformation1 `xml:"OrgnlPmtInfAndSts,omitempty"`
 }

@@ -7,7 +7,7 @@ import (
 
 type Document struct {
 	XMLName                     xml.Name                          `xml:"urn:CBI:xsd:CBIBdySDDTechValSts.00.01.00 CBIBdySDDTechValSts"`
-	PhyMsgInf                   PhyMsgInf                         `xml:"PhyMsgInf,omitempty"`
+	PhyMsgInf                   *PhyMsgInf                        `xml:"PhyMsgInf,omitempty"`
 	CBIEnvelSDDTechValStsLogMsg []CBIEnvelSDDTechValStsLogMsgType `xml:"CBIEnvelSDDTechValStsLogMsg,omitempty"`
 }
 

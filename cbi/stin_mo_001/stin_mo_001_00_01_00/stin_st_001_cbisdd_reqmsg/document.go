@@ -8,7 +8,7 @@ import (
 
 type Document struct {
 	XMLName xml.Name                                         `xml:"urn:CBI:xsd:CBISDDReqLogMsg.00.01.00 CBISDDReqLogMsg"`
-	GrpHdr  pain_008_001_02.GroupHeader39                    `xml:"GrpHdr"`
+	GrpHdr  *pain_008_001_02.GroupHeader39                   `xml:"GrpHdr"`
 	PmtInf  []pain_008_001_02.PaymentInstructionInformation4 `xml:"PmtInf"`
 }
 

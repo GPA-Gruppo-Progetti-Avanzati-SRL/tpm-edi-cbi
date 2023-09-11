@@ -27,14 +27,14 @@ func TestDocument_Read_STIN_ST_002_CbiSddTechValStsMsg(t *testing.T) {
 
 func TestDocument_STIN_ST_002_CbiSddTechValStsMsg(t *testing.T) {
 	d := stin_st_002_cbisdd_techvalstsmsg.Document{
-		PhyMsgInf: stin_st_002_cbisdd_techvalstsmsg.PhyMsgInf{},
-		CBIEnvelSDDTechValStsLogMsg: stin_st_002_cbisdd_techvalstsmsg.CBIEnvelSDDTechValStsLogMsgType{
-			CBISDDTechValStsLogMsg: []stin_st_002_cbisdd_techvalstsmsg.CBISDDTechValStsLogMsgType{
-				{
-					GrpHdr: pain_002_001_03.GroupHeader36{
+		PhyMsgInf: &stin_st_002_cbisdd_techvalstsmsg.PhyMsgInf{},
+		CBIEnvelSDDTechValStsLogMsg: []stin_st_002_cbisdd_techvalstsmsg.CBIEnvelSDDTechValStsLogMsgType{
+			{
+				CBISDDTechValStsLogMsg: &stin_st_002_cbisdd_techvalstsmsg.CBISDDTechValStsLogMsgType{
+					GrpHdr: &pain_002_001_03.GroupHeader36{
 						MsgId: "message-id",
 					},
-					OrgnlGrpInfAndSts: pain_002_001_03.OriginalGroupInformation20{},
+					OrgnlGrpInfAndSts: &pain_002_001_03.OriginalGroupInformation20{},
 					OrgnlPmtInfAndSts: nil,
 				},
 			},
