@@ -6,6 +6,9 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022/iso-20022/messages/pain/001.001.03/pain_001_001_03"
 )
 
+type DocumentAdapter func(stipDocument *Document) (*Document, error)
+type DocumentsAdapter func(stipDocuments []*Document) ([]*Document, error)
+
 type Document struct {
 	XMLName xml.Name                                       `xml:"urn:CBI:xsd:CBIPaymentRequest.00.04.00 CBIPaymentRequest"`
 	GrpHdr  *pain_001_001_03.GroupHeader32                 `xml:"GrpHdr"`
