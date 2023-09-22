@@ -7,9 +7,9 @@ import (
 )
 
 type Document struct {
-	XMLName xml.Name                                         `xml:"urn:CBI:xsd:CBIPaymentRequest.00.04.00 CBIPaymentRequest"`
-	GrpHdr  *pain_001_001_03.GroupHeader32                   `xml:"GrpHdr"`
-	PmtInf  []pain_001_001_03.PaymentInstructionInformation3 `xml:"PmtInf"`
+	XMLName xml.Name                                       `xml:"urn:CBI:xsd:CBIPaymentRequest.00.04.00 CBIPaymentRequest"`
+	GrpHdr  *pain_001_001_03.GroupHeader32                 `xml:"GrpHdr"`
+	PmtInf  pain_001_001_03.PaymentInstructionInformation3 `xml:"PmtInf"`
 }
 
 func (d *Document) ToXML() ([]byte, error) {

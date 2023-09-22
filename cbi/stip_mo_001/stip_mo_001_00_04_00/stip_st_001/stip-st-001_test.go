@@ -135,7 +135,7 @@ func TestDocument_STIP_MO_001_00_04_00(t *testing.T) {
 				},
 			},
 		},
-		PmtInf: []pain_001_001_03.PaymentInstructionInformation3{{
+		PmtInf: pain_001_001_03.PaymentInstructionInformation3{
 			PmtInfId:  common.MustToMax35Text(common.Max35TextSample),
 			PmtMtd:    common.MustToPaymentMethod3Code(common.PaymentMethod3CodeSample),
 			BtchBookg: xsdt.MustToBoolean(xsdt.BooleanSample),
@@ -1294,7 +1294,7 @@ func TestDocument_STIP_MO_001_00_04_00(t *testing.T) {
 						}},
 					},
 				}},
-			}},
+			},
 		},
 	}
 
