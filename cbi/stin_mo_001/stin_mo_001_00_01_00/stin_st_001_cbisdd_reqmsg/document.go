@@ -6,6 +6,8 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022/iso-20022/messages/pain/008.001.02/pain_008_001_02"
 )
 
+type DocumentAdapter func(d *Document) (*Document, error)
+
 type Document struct {
 	XMLName xml.Name                                         `xml:"urn:CBI:xsd:CBISDDReqLogMsg.00.01.00 CBISDDReqLogMsg"`
 	GrpHdr  *pain_008_001_02.GroupHeader39                   `xml:"GrpHdr"`

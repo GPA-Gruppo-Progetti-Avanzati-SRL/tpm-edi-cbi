@@ -5,6 +5,8 @@ import (
 	"encoding/xml"
 )
 
+type DocumentAdapter func(d *Document) (*Document, error)
+
 type Document struct {
 	XMLName                 xml.Name                  `xml:"urn:CBI:xsd:CBIBdySDDStsRpt.00.01.00 CBIBdySDDStsRpt"`
 	PhyMsgInf               *PhyMsgInf                `xml:"PhyMsgInf,omitempty"`

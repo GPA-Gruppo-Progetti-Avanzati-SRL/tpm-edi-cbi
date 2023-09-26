@@ -6,6 +6,8 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-edi-iso20022/iso-20022/messages/camt/053.001.02/camt_053_001_02"
 )
 
+type DocumentAdapter func(d *Document) (*Document, error)
+
 type Document struct {
 	XMLName                        xml.Name                         `xml:"urn:CBI:xsd:CBIBdyBkToCstmrStmtReq.00.01.02 CBIBdyBkToCstmrStmtReq"`
 	PhyMsgInf                      *PhyMsgInf                       `xml:"PhyMsgInf,omitempty"`
